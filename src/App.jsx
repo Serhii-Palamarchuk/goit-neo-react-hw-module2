@@ -3,6 +3,7 @@ import Feedback from "./components/Feedback/Feedback";
 import Options from "./components/Options/Options";
 import Notification from "./components/Notification/Notification";
 import css from "./App.module.css";
+import Description from "./components/Description/Description";
 
 const App = () => {
   const [feedback, setFeedback] = useState(() => {
@@ -35,10 +36,7 @@ const App = () => {
   return (
     <div className={css.container}>
       <h1>Sip Happens Café</h1>
-      <p>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
+      <Description />
 
       <Options
         options={Object.keys(feedback)}
